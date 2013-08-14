@@ -23,7 +23,7 @@ setup(name="helga-fredoisms",
       zip_safe=False,
       entry_points={
           'helga_handlers': [
-              'fredoisms = fredoisms:FredoismExtension',
+              'fredoisms = helga_fredoisms:FredoismExtension',
           ]
       },
 )

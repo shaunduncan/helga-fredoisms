@@ -1,13 +1,10 @@
-import os
-from setuptools import setup, find_packages
+from setuptools import setup
 
 version = '0.0.1'
-setupdir = os.path.dirname(os.path.abspath(__file__))
-description = open(os.path.join(setupdir, 'README.md'), 'r').read()
 
 setup(name="helga-fredoisms",
       version=version,
-      description=description,
+      description='Helga plugin for saying things alfredo might say',
       classifiers=['Development Status :: 1 - Beta',
                    'Environment :: IRC',
                    'Intended Audience :: Twisted Developers, IRC Bot Developers',
@@ -21,7 +18,9 @@ setup(name="helga-fredoisms",
       author_email='shaun.duncan@gmail.com',
       url='https://github.com/shaunduncan/helga-fredoisms',
       license='MIT',
-      packages=find_packages(),
+      py_modules=['helga_fredoisms'],
+      include_package_data=True,
+      zip_safe=False,
       entry_points={
           'helga_handlers': [
               'fredoisms = fredoisms:FredoismExtension',
